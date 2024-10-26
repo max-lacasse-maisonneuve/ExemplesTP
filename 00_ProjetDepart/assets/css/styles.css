@@ -1,0 +1,116 @@
+@import url("./reset.css");
+
+/* Importation de la police externe */
+@font-face {
+    font-family: "Super chips";
+    src: url("../fonts/Super\ Chips.ttf") format("truetype");
+}
+
+/*Elements de base*/
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100dvw;
+    min-height: 100dvh;
+    padding: 5rem;
+    background-image: url("../images/bg.png");
+
+    font-family: "Super chips", sans-serif;
+    color: #ffffff;
+
+    backdrop-filter: brightness(35%);
+    cursor: url("../images/Curseur.png"), auto;
+}
+
+h1 {
+    margin-bottom: 2rem;
+
+    font-size: 3rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+
+    font-size: 2rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+
+    width: 90vw;
+    min-height: 80vh;
+    padding: 3rem;
+    border: 2px solid salmon;
+
+    text-align: left;
+
+    gap: 1rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    gap: 2rem;
+}
+
+canvas {
+    border: 2px solid;
+    background-color: black;
+}
+
+/* SECTION DES BOUTONS */
+.bouton {
+    padding: 2rem 3rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: salmon;
+
+    font-size: 2rem;
+    color: white;
+
+    transition: all 350ms;
+
+    cursor: pointer;
+}
+
+.bouton:hover {
+    border: 2px solid white;
+    background-color: color-mix(in oklab, salmon 85%, black 15%);
+
+    transform: scale(1.05);
+}
+
+/* Balises spécifiques */
+#introduction {
+    backdrop-filter: blur(5px) brightness(150%);
+}
+
+#jeu {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Classe servant à cacher un élément. À garder en dernier*/
+.invisible {
+    display: none !important;
+}
